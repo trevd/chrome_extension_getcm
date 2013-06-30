@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "get.cm device wiki page link",
+  "description": "Adds a link to the related wiki.cyanogenmod.com page to the device download list",
+  "version": "1.0",
+  "permissions": [
+    "http://get.cm/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://get.cm/*"],
+      "js": ["addwiki.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
